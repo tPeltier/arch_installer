@@ -77,7 +77,7 @@ done
 echo "%wheel ALL=(ALL) ALL" >> /etc/sudoers
 
 # Don't forget to replace "tPeltier" by the username of your Github account
-curl https://raw.githubusercontent.com/tPeltier \
+curl https://raw.githubusercontent.com/tPeltier\
 /arch_installer/master/install_user.sh > /tmp/install_user.sh;
 
 # Switch user and run the final script
