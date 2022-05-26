@@ -89,6 +89,6 @@ echo "$name" > /tmp/user_name
 dialog --title "Continue installation" --yesno \
 "Do you want to install all your apps and your dotfiles?" \
 10 60 \
-&& curl https://raw.githubusercontent.com/tPeltier \
+&& curl https://raw.githubusercontent.com/tPeltier\
 /arch_installer/master/install_apps.sh > /tmp/install_apps.sh \
 && bash /tmp/install_apps.sh
