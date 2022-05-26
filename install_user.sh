@@ -21,15 +21,15 @@ aur_check() {
     for arg in "$@"
     do
         if [[ "$qm" != *"$arg"* ]]; then
-            paru --noconfirm -S "$arg" &>> /tmp/aur_install \
+            yay --noconfirm -S "$arg" &>> /tmp/aur_install \
                 || aur_install "$arg" &>> /tmp/aur_install
         fi
     done
 }
 
 cd /tmp
-dialog --infobox "Installing \"paru\", an AUR helper..." 10 60
-aur_check paru
+dialog --infobox "Installing \"yay\", an AUR helper..." 10 60
+aur_check yay
 
 count=$(wc -l < /tmp/aur_queue)
 c=0
